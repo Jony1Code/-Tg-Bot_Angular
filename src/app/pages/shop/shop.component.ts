@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-shop',
   standalone: true,
   imports: [CommonModule],
-  template: `<h1>main shop</h1>`,
+  template: ``,
 })
 export class ShopComponent {
   telegram = inject(TelegramService);
