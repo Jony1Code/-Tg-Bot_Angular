@@ -1,50 +1,27 @@
-@use "@angular/material" as mat;
-
-$my-primary: mat.define-palette(mat.$indigo-palette);
-$my-accent: mat.define-palette(
-  mat.$pink-palette,
-  (
-    50: #ffebee,
-    100: #ffcdd2,
-    200: #ef9a9a,
-    300: #e57373,
-    400: #ef5350,
-    500: #f44336,
-    600: #e53935,
-    700: #d32f2f,
-    800: #c62828,
-    900: #b71c1c,
-  )
-);
-
-$my-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $my-primary,
-      accent: $my-accent,
-    ),
-  )
-);
-
-@include mat.all-component-themes($my-theme);
-
 header {
-  background-color: mat.get-color-from-palette($my-primary);
-  padding: 10px;
-}
+  background-color: #f8f9fa;
+  padding: 15px 0;
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-nav a {
-  color: mat.get-color-from-palette($my-accent);
-  text-decoration: none;
-}
+    a {
+      color: #6c757d;
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: 18px;
 
-nav a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+      &:hover {
+        cursor: pointer;
+        color: #007bff;
+      }
+
+      &.router-link-active {
+        color: #007bff;
+        font-weight: bold;
+      }
+    }
+  }
 }
